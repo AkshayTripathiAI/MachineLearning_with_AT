@@ -1,147 +1,68 @@
-# Full Stack Machine Learning Engineer Roadmap
+# MachineLearning_with_AT
 
-Below is a comprehensive roadmap that outlines the key steps and topics to cover on your journey to becoming a Full Stack ML engineer. Keep in mind that this is a high-level roadmap, and you can customize it based on your interests and goals.
+My learning notes for the path toward machine learning engineering: small, self-contained Python scripts for core Python, NumPy and Pandas, plus short notes on neural networks and generative AI. It is a study log, not a library or a finished course.
 
-## 1. Python Programming
-Python is widely considered the best programming language for machine learning and is extremely popular in data science.
+## Contents
 
-- Python basics: Variables, Operators, Conditional Statements
-- Lists and Strings
-- Dictionary, Tuple, Set
-- While Loop, Nested Loops, Loop Else
-- For Loop, Break, and Continue statements
-- Functions, Return Statement, Recursion
-- File Handling, Exception Handling
-- Object-Oriented Programming (OOP)
+### 1. Python programming
 
-## 2. Data Analysis
-NumPy and Pandas are essential Python libraries for handling and manipulating large datasets efficiently. NumPy is used for numerical computations, while Pandas provides high-level data structures for data analysis.
+Folder: [`Python_Programming/`](Python_Programming)
 
-### NumPy
-- Vectors and Matrix Operations
-- Reshaping Arrays
-- Diagonal Operations, Trace
-- Mean, Variance, and Standard Deviation
-- Add, Subtract, Multiply, Dot, and Cross Product
+| Topic | Scripts |
+|---|---|
+| [Python basics, Variables, Operators, Conditional Statements](Python_Programming/Python%20basics%2C%20Variables%2C%20Operators%2C%20Conditional%20Statements) | [`variables.py`](Python_Programming/Python%20basics%2C%20Variables%2C%20Operators%2C%20Conditional%20Statements/variables.py), [`operators.py`](Python_Programming/Python%20basics%2C%20Variables%2C%20Operators%2C%20Conditional%20Statements/operators.py), [`conditional_statements.py`](Python_Programming/Python%20basics%2C%20Variables%2C%20Operators%2C%20Conditional%20Statements/conditional_statements.py) |
+| [Lists and Strings](Python_Programming/Lists%20and%20Strings) | [`lists.py`](Python_Programming/Lists%20and%20Strings/lists.py), [`strings.py`](Python_Programming/Lists%20and%20Strings/strings.py) |
+| [Dictionary, Tuple, Set](Python_Programming/Dictionary%2C%20Tuple%2C%20Set) | [`dictionary.py`](Python_Programming/Dictionary%2C%20Tuple%2C%20Set/dictionary.py), [`tuple.py`](Python_Programming/Dictionary%2C%20Tuple%2C%20Set/tuple.py), [`set.py`](Python_Programming/Dictionary%2C%20Tuple%2C%20Set/set.py), [`break_continue.py`](Python_Programming/Dictionary%2C%20Tuple%2C%20Set/break_continue.py) |
+| [Loops](Python_Programming/Loops) | [`while_loop.py`](Python_Programming/Loops/while_loop.py), [`nested_loops.py`](Python_Programming/Loops/nested_loops.py), [`loop_else.py`](Python_Programming/Loops/loop_else.py) |
+| [For Loop, Break, and Continue statements](Python_Programming/For%20Loop%2C%20Break%2C%20and%20Continue%20statements) | [`for_loop.py`](Python_Programming/For%20Loop%2C%20Break%2C%20and%20Continue%20statements/for_loop.py) |
+| [Functions, Return Statement, Recursion](Python_Programming/Functions%2C%20Return%20Statement%2C%20Recursion) | [`functions.py`](Python_Programming/Functions%2C%20Return%20Statement%2C%20Recursion/functions.py), [`return_statement.py`](Python_Programming/Functions%2C%20Return%20Statement%2C%20Recursion/return_statement.py), [`recursion.py`](Python_Programming/Functions%2C%20Return%20Statement%2C%20Recursion/recursion.py) |
+| [File Handling, Exception Handling](Python_Programming/File%20Handling%2C%20Exception%20Handling) | [`file_handling.py`](Python_Programming/File%20Handling%2C%20Exception%20Handling/file_handling.py), [`exception_handling.py`](Python_Programming/File%20Handling%2C%20Exception%20Handling/exception_handling.py) |
+| [Object-Oriented Programming (OOP)](Python_Programming/Object-Oriented%20Programming%20%28OOP%29) | [`classes.py`](Python_Programming/Object-Oriented%20Programming%20%28OOP%29/classes.py), [`inheritance.py`](Python_Programming/Object-Oriented%20Programming%20%28OOP%29/inheritance.py), [`encapsulation.py`](Python_Programming/Object-Oriented%20Programming%20%28OOP%29/encapsulation.py), [`polymorphism.py`](Python_Programming/Object-Oriented%20Programming%20%28OOP%29/polymorphism.py) |
 
-### Pandas
-- Creating DataFrames
-- Series and DataFrames
-- Slicing Rows and Columns
-- Reading and Writing CSV files
-- Handling Missing Values
-- GroupBy and Concatenation
+### 2. Data analysis
 
-## 3. Data Visualization
-Matplotlib is the foundational data visualization library in Python, complemented by Seaborn and Plotly for advanced plots and interactivity.
+**NumPy** ([`Data_Analysis/NumPy/`](Data_Analysis/NumPy))
 
-### Matplotlib
-- Bar Chart, Pie Chart, Histogram, Scatter Plot
-- Format Strings in Plots
-- Labels and Legends
+- [`vectors_matrix.py`](Data_Analysis/NumPy/vectors_matrix.py): creating vectors and matrices
+- [`reshaping_arrays.py`](Data_Analysis/NumPy/reshaping_arrays.py): reshaping arrays
+- [`diagonal_trace.py`](Data_Analysis/NumPy/diagonal_trace.py): diagonal and trace of a matrix
+- [`mean_variance_std.py`](Data_Analysis/NumPy/mean_variance_std.py): mean, variance and standard deviation
+- [`operations.py`](Data_Analysis/NumPy/operations.py): add, subtract, multiply, dot and cross product
 
-### Seaborn
-- Wide Range of Plot Types
-- Statistical Enhancements
-- Categorical Data Visualization
-- Customization and Theming
+**Pandas** ([`Data_Analysis/Pandas/`](Data_Analysis/Pandas))
 
-*Optional*: Learn Plotly and Tableau for more advanced visualizations.
+- [`create_dataframe.py`](Data_Analysis/Pandas/create_dataframe.py): creating DataFrames from a list and a dict
+- [`series_dataframes.py`](Data_Analysis/Pandas/series_dataframes.py): Series and DataFrames
+- [`slicing.py`](Data_Analysis/Pandas/slicing.py): slicing rows and columns
+- [`csv_read_write.py`](Data_Analysis/Pandas/csv_read_write.py): reading and writing CSV (expects a `data.csv` in the working directory; not included)
+- [`handling_missing_values.py`](Data_Analysis/Pandas/handling_missing_values.py): finding, filling and dropping missing values
+- [`groupby_concat.py`](Data_Analysis/Pandas/groupby_concat.py): `groupby` and `concat`
 
-## 4. Statistics
-Statistics is a critical tool in machine learning, helping to recognize patterns and make informed data-driven decisions.
+### 3. Neural networks
 
-### Descriptive Statistics
-- Continuous and Discrete Functions
-- Probability Distributions
-- Gaussian (Normal) Distribution
-- Frequency, Central Tendency, and Dispersion
-- Skewness and Kurtosis
-- Normality Tests
-- Regression Analysis (Linear and Non-Linear)
-- ANOVA, Homoscedasticity, Goodness of Fit
+- [`neural_network.md`](Neural_Network/neural_network.md): a short definition of what a neural network is
 
-### Inferential Statistics
-- t-Test, z-Test
-- Hypothesis Testing, Type I & Type II Errors
-- One-way and Two-way ANOVA
-- Chi-Square Test (for categorical data)
+### 4. Generative AI
 
-## 5. Machine Learning
-To master ML algorithms, use Scikit-Learn. Focus on both Supervised and Unsupervised Learning algorithms.
+- [`Fundamentals_notes.md`](GenerativeAI/Fundamentals_notes.md): notes on generative AI fundamentals (AI's impact on work, LLM tokens, prompt injection, legal risks of generative AI, open-source LLMs for commercial use, Databricks Lakehouse AI features)
 
-- Linear Regression
-- Logistic Regression
-- Decision Trees
-- Gradient Descent
-- Random Forests
-- Ridge and Lasso Regression
-- Naive Bayes
-- Support Vector Machines (SVM)
-- K-Means Clustering
+## Running the scripts
 
-### Additional Concepts
-- Principal Component Analysis (PCA)
-- Recommender Systems
-- Predictive Analytics
-- Exploratory Data Analysis (EDA)
+Each script is standalone and prints its results. The Python scripts use only the standard library; the data-analysis scripts need NumPy and Pandas.
 
-## 6. Natural Language Processing (NLP)
-NLP is crucial for working with human language data and is widely used in various industries.
+```bash
+pip install numpy pandas
+python Data_Analysis/NumPy/operations.py
+python "Python_Programming/Loops/nested_loops.py"
+```
 
-- Handling Unstructured Text Data
-- Text Classification and Sentiment Analysis
-- Named Entity Recognition (NER)
-- Text Preprocessing
-- Text Generation and Language Translation
-- Topic Modeling
-- Machine Translation (BLEU Score)
-- Summarization (ROUGE Score)
-- Language Modeling (Perplexity)
-- Speech Recognition
+There is no `requirements.txt`. Folder names contain spaces, so quote paths on the command line.
 
-## 7. Deep Learning
-Master deep learning algorithms using frameworks like TensorFlow or PyTorch.
+## Roadmap
 
-- Neural Networks Basics
-- Activation Functions
-- Backpropagation Algorithm
-- Convolutional Neural Networks (CNN) for Computer Vision
-- Recurrent Neural Networks (RNN) for Sequential Data
-- Generative Adversarial Networks (GAN) for Data Generation
+The repo follows a Python-first ML learning path. Covered so far:
 
-## 8. Computer Vision
-Computer vision focuses on enabling computers to interpret and analyze visual data.
-
-- Working with OpenCV
-- Understanding Pretrained Models like AlexNet, ImageNet, and ResNet
-- Neural Networks and Building a Perceptron
-- Building a Single-Layer and Deep Neural Network
-- Image Content Analysis with OpenCV-Python
-- Edge Detection
-
-## 9. MLOps
-Master any one cloud service provider (AWS, GCP, or Azure). Understanding one allows you to switch easily. Here, we focus on AWS.
-
-- Deep Learning on AWS
-- Amazon Rekognition (Image Applications)
-- Amazon Textract (Extracting Text)
-- Amazon Transcribe (Speech to Text)
-- AWS Polly (Voice Analysis)
-- Amazon Lex (Natural Language Understanding)
-- Amazon SageMaker (Building and Deploying Models)
-- Deploy ML Models Using Flask
-
-## 10. Git & GitHub
-Version control is essential in ML for collaboration and project management.
-
-- Understanding Git
-- Git Commands and Committing Code
-- How to Use GitHub
-- Making Your First Open-Source Contribution
-- Working with a Team (Part 1)
-- Creating a Stunning GitHub Profile
-- Building a Viral Repository
-- Building a Free Portfolio Landing Page
-- Growing Followers on GitHub
-- Working with a Team (Part 2: Issues, Milestones, and Projects)
+1. Python programming
+2. Data analysis with NumPy and Pandas
+3. Neural network basics (started)
+4. Generative AI fundamentals (started)
