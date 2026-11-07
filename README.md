@@ -34,9 +34,9 @@ Folder: [`Python_Programming/`](Python_Programming)
 - [`create_dataframe.py`](Data_Analysis/Pandas/create_dataframe.py): creating DataFrames from a list and a dict
 - [`series_dataframes.py`](Data_Analysis/Pandas/series_dataframes.py): Series and DataFrames
 - [`slicing.py`](Data_Analysis/Pandas/slicing.py): slicing rows and columns
-- [`csv_read_write.py`](Data_Analysis/Pandas/csv_read_write.py): reading and writing CSV (expects a `data.csv` in the working directory; not included)
+- [`csv_read_write.py`](Data_Analysis/Pandas/csv_read_write.py): reading a CSV, filtering it and writing `output.csv` (uses the bundled [`data.csv`](Data_Analysis/Pandas/data.csv) and recreates it if it is missing)
 - [`handling_missing_values.py`](Data_Analysis/Pandas/handling_missing_values.py): finding, filling and dropping missing values
-- [`groupby_concat.py`](Data_Analysis/Pandas/groupby_concat.py): `groupby` and `concat`
+- [`groupby_concat.py`](Data_Analysis/Pandas/groupby_concat.py): `groupby` (mean with `numeric_only=True`, multi-aggregation with `agg`) and `concat`
 
 ### 3. Neural networks
 
@@ -51,12 +51,17 @@ Folder: [`Python_Programming/`](Python_Programming)
 Each script is standalone and prints its results. The Python scripts use only the standard library; the data-analysis scripts need NumPy and Pandas.
 
 ```bash
-pip install numpy pandas
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements.txt  # numpy, pandas (pandas 2.x)
+
 python Data_Analysis/NumPy/operations.py
+python Data_Analysis/Pandas/groupby_concat.py
 python "Python_Programming/Loops/nested_loops.py"
+python "Python_Programming/File Handling, Exception Handling/exception_handling.py" 5
 ```
 
-There is no `requirements.txt`. Folder names contain spaces, so quote paths on the command line.
+Folder names contain spaces, so quote paths on the command line. `exception_handling.py` takes the number as an argument or asks for it interactively. All scripts were checked to run on Python 3.11 with pandas 3.x and NumPy 2.x.
 
 ## Roadmap
 
